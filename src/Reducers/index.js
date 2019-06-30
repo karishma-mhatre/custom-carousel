@@ -11,7 +11,6 @@ let initialState = {
 let carousel = (state = initialState, action) => {
     switch(action.type) {
         case CHANGE_NUMBER_OF_SLIDES:
-            console.log(state);
             return {
                 ...state,
                 numberOfSlides: +action.numberOfSlides,

@@ -11,7 +11,6 @@ class SlidesSelector extends Component {
 
 
     handleSelect = (num) => {
-        console.log(num);
         this.props.dispatch(changeNumberOfSlides(num))
     }
 

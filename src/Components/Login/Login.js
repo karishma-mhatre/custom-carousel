@@ -13,7 +13,6 @@ class Login extends Component {
 
     logIn = (e) => {
         e.preventDefault();
-        console.log(e.target.elements);
         let username = e.target.elements.user.value;
         let password = e.target.elements.pwd.value;
         if(username === "shaadi" && password === "123") {
