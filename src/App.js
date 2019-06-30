@@ -3,9 +3,9 @@ import Carousel from '../src/Components/Carousel/Carousel'
 import SlidesSelector from './Components/SlidesSelector/SlidesSelector';
 import { connect } from 'react-redux';
 import { toggleHistory } from './Actions';
-import Modal from './Components/Modal';
+import Modal from './Components/Modal/Modal';
 import History from './Components/History/History'
-import './App.css';
+import './App.scss';
 
 class App extends React.Component {
 
@@ -18,8 +18,8 @@ class App extends React.Component {
       <>
         <SlidesSelector></SlidesSelector>
         <Carousel></Carousel>
-        <div>
-          <button type="button" onClick={this.toggleHistory}>Finish</button>
+        <div className="finish">
+          <button className="btn"type="button" onClick={this.toggleHistory}>Finish</button>
         </div>
         {
           this.props.showHistory &&

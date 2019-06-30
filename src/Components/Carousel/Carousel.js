@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import './carousel.scss';
 
 class Carousel extends Component {
     constructor(props) {
@@ -13,7 +14,7 @@ class Carousel extends Component {
 
     showSlides = (e, n) => {
         var i;
-        var slides = document.getElementsByClassName("mySlides");
+        var slides = document.getElementsByClassName("slide");
 
         if (n > slides.length) { this.currentSlide = 1 }
         if (n < 1) { this.currentSlide = slides.length }
@@ -21,7 +22,7 @@ class Carousel extends Component {
             slides[i].style.display = "none";
         }
 
-        slides[this.currentSlide - 1].style.display = "block";
+        slides[this.currentSlide - 1].style.display = "flex";
     }
 
     componentDidMount() {
@@ -39,16 +40,22 @@ class Carousel extends Component {
         
         let slides = [];
         for(let i=0; i<this.props.numberOfSlides; i++) {
-            slides.push(<div key={i} className="mySlides">{i + 1}</div>)
+            slides.push(<div key={i} className="slide">
+                            <div className="slide-title">{i + 1}</div>
+                        </div>)
         }
 
         return (
-            <div className="mySlides-container">
-                <button type="button" onClick={(e) => {this.changeSlide(e, -1)}}>-</button>
+            <div className="slide-container">
+                <button className="carousel-btn carousel-btn--left" type="button" onClick={(e) => {this.changeSlide(e, -1)}}>
+                    <i className="fa fa-caret-left" aria-hidden="true"></i>
+                </button>
                 {
                     slides   
                 }
-                <button type="button" onClick={(e) => {this.changeSlide(e, 1)}}>+</button>
+                <button className="carousel-btn carousel-btn--right" type="button" onClick={(e) => {this.changeSlide(e, 1)}}>
+                    <i className="fa fa-caret-right" aria-hidden="true"></i>
+                </button>
             </div>
         )
     }
