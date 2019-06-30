@@ -25,6 +25,10 @@ class Login extends Component {
     }
 
     render() {
+        if(this.props.isLoggedIn) {
+            window.location.hash = "/carousel"
+        }
+        
         return (
             <div>
                 <div>
@@ -53,4 +57,8 @@ class Login extends Component {
     }
 }
 
-export default connect()(Login);
+const mapStateToProps = (state) => ({
+    isLoggedIn: state.carousel.isLoggedIn
+})
+
+export default connect(mapStateToProps)(Login);

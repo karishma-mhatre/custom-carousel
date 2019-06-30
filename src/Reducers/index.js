@@ -1,10 +1,11 @@
-import { CHANGE_NUMBER_OF_SLIDES, LOG_IN } from '../Actions';
+import { CHANGE_NUMBER_OF_SLIDES, LOG_IN, LOG_OUT, TOGGLE_HISTORY } from '../Actions';
 import { combineReducers } from 'redux';
 
 let initialState = {
     numberOfSlides: 1,
     selectedSlides: [1],
-    isLoggedIn: false
+    isLoggedIn: false,
+    showHistory: false
 }
 
 let carousel = (state = initialState, action) => {
@@ -24,10 +25,15 @@ let carousel = (state = initialState, action) => {
                 ...state,
                 isLoggedIn: true
             }
-        case LOG_IN:
+        case LOG_OUT:
             return {
                 ...state,
                 isLoggedIn: false
+            }
+        case TOGGLE_HISTORY: 
+            return {
+                ...state,
+                showHistory: !state.showHistory
             }
         default: 
             return state;
