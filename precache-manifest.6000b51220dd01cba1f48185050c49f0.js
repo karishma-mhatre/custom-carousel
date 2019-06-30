@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3538369d909375865752bd9ef0a9d437",
+    "revision": "69dc4eee62ffdc07ca985157c4843eae",
     "url": "/custome-carousel/index.html"
   },
   {
-    "revision": "4c9d498da77cdc3cf820",
+    "revision": "2c41a903657db2b1c8ae",
     "url": "/custome-carousel/static/css/main.229c2084.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/custome-carousel/static/js/2.49a16226.chunk.js"
   },
   {
-    "revision": "4c9d498da77cdc3cf820",
-    "url": "/custome-carousel/static/js/main.43659b19.chunk.js"
+    "revision": "2c41a903657db2b1c8ae",
+    "url": "/custome-carousel/static/js/main.32f1f510.chunk.js"
   },
   {
     "revision": "c6d1c47da330662a8f05",
