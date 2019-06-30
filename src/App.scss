@@ -1,0 +1,11 @@
+@import './styles/variables.scss';
+
+.finish {
+  text-align: center;
+  padding: 20px;
+
+  .btn {
+    border-color: $color-red;
+    color: $color-red;
+  }
+}

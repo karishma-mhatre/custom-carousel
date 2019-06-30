@@ -1,0 +1,35 @@
+@import '../../styles/variables.scss';
+
+.history {
+    width: 600px;
+    background: $color-white;
+
+    hr {
+        background-color: $color-dark-grey;
+    }
+
+    &-title {
+        color: $color-dark-grey;
+        padding-bottom: 10px;
+    }
+
+    &-selected-slides {
+        border-top: 1px solid $color-light-grey;
+        border-bottom: 1px solid $color-light-grey;
+        padding: 20px 0px;
+
+        .slides {
+            padding: 10px;
+            border: 1px solid $color-dark-grey;
+            margin: 5px;
+            color: $color-dark-grey;
+            border-radius: 5px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .history {
+        width: 100%;
+    }
+}
