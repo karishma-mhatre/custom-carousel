@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { NUMBERS } from '../../utils';
 import './carousel.scss';
 
 class Carousel extends Component {
@@ -41,7 +42,7 @@ class Carousel extends Component {
         let slides = [];
         for(let i=0; i<this.props.numberOfSlides; i++) {
             slides.push(<div key={i} className="slide">
-                            <div className="slide-title">{i + 1}</div>
+                            <div className="slide-title">{NUMBERS[i]}</div>
                         </div>)
         }
 
