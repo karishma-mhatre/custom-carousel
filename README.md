@@ -6,4 +6,4 @@ To run the the app, clone the repo on your machine, change to project directory 
 
 #npm start
 
-The project is deployed on following link: https://karishma-mhatre.github.io/frappe-app/#/
+The project is deployed on following link: https://karishma-mhatre.github.io/custom-carousel/#/
